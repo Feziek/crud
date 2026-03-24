@@ -1,23 +1,16 @@
 import express from "express"
 
-import { pool } from "./lib/db.js"
+import BookRoute from "./routes/BookRoute.js"
 
 const app = express()
+
+app.use(express.json())
 
 app.get("/", (req, res) => {
     res.json("Backend is running successfully")
 })
 
-app.get("/books", (req, res) => {
-    const q = "SELECT * FROM books"
-    pool.query(q,(err, data) => {
-        if (err) {
-            console.error("DB ERROR:", err)
-            return res.status(500).json(err)
-        } 
-        return res.json(data)
-    }) 
-})
+app.use("/books", BookRoute)
 
 const PORT = process.env.PORT || 8000
 
