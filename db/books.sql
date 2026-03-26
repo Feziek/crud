@@ -17,3 +17,6 @@ CREATE TABLE books (
 
 -- DELETE FROM books 
 -- WHERE id BETWEEN 2 AND 10;
+
+-- ALTER TABLE books
+-- MODIFY cover VARCHAR(255);
