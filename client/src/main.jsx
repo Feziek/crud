@@ -3,12 +3,12 @@ import '@styles/index.css'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
-import { Root } from '@routes/Root.jsx'
+import { MainRoute } from '@routes/MainRoute.jsx'
 
 const root = createRoot(document.getElementById('root'))
 
 root.render(
   <StrictMode>
-    <Root />
+    <MainRoute />
   </StrictMode>
 )
