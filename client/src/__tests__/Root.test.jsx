@@ -1,12 +1,12 @@
 import { describe, test, expect, beforeEach } from 'vitest'
 import { render, screen, cleanup } from '@testing-library/react'
 
-import { Root } from '@routes/Root.jsx'
+import { MainRoute } from '@routes/MainRoute.jsx'
 
-describe('Root component', () => {
+describe('MainRoute component', () => {
   beforeEach(() => {
     cleanup()
-    render(<Root />)
+    render(<MainRoute />)
   })
 
   test('It should work w/o errors', () => {
