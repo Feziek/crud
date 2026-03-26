@@ -18,4 +18,11 @@ export default defineConfig({
       '@styles': path.resolve('src/styles')
     }
   },
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:8000"
+      }
+    }
+  }
 })
