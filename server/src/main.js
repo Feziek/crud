@@ -4,6 +4,7 @@ import cors from "cors"
 
 import BookRoute from "./routes/BookRoute.js"
 
+import { ErrorHandler } from "./middleware/ErrorHandler.js"
 import { network } from "./utils/constants.js"
 
 dotenv.config()
@@ -24,13 +25,12 @@ app.get("/", (req, res) => {
 app.use("/api/books", BookRoute)
 
 app.use((req, res) => {
-    res.status(network.NOT_FOUND).json({ message: "Route not found" })
+    res.status(network.NOT_FOUND).json({ 
+        message: "Route not found" 
+    })
 })
 
-app.use((err, req, res, next) => {
-    console.error("GLOBAL ERROR:", err)
-    res.status(network.INTERNAL_SERVER_ERROR).json({ message: "Something went wrong" })
-})
+app.use(ErrorHandler)
 
 const PORT = process.env.PORT || 8000
 
