@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react"
 
-import { ChatbotIcon } from "./ChatBotIcon"
+import { ChatbotIcon } from "./ChatbotIcon"
 
 import { FiSend, FiChevronUp } from "react-icons/fi"
 
