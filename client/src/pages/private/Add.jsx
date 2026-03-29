@@ -80,7 +80,7 @@ export const Add = () => {
           />
 
           { book.cover && (
-            <div className="w-full h-48 rounded-lg overflow-hidden border">
+            <div className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110">
               <img
                 src={ book.cover }
                 alt="Preview"
