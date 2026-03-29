@@ -1,9 +1,10 @@
-export function ChatbotIcon() {
+export function ChatbotIcon({ className }) {
     return(
         <svg 
             xmlns="http://www.w3.org/2000/svg" 
             width="50" 
             height="50" 
+            className={ className } 
             viewBox="0 0 1024 1024">
                 <path 
                     d="M738.3 287.6H285.7c-59 0-106.8 47.8-106.8 106.8v303.1c0 59 47.8 106.8 106.8 
