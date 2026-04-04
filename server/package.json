@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "src/main.js",
   "scripts": {
-    "dev": "nodemon",
+    "server-dev": "nodemon",
     "start": "node src/main.js",
 		"build": "echo \"no build step\""
   },
